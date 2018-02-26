@@ -30,7 +30,7 @@
 #import "MZFormSheetPresentationContentSizing.h"
 #import "MZFormSheetPresentationViewController.h"
 
-CGFloat const MZFormSheetPresentationControllerDefaultAboveKeyboardMargin = 20;
+CGFloat const MZFormSheetPresentationControllerDefaultAboveKeyboardMargin = 0;
 
 @interface MZFormSheetPresentationController () <UIGestureRecognizerDelegate>
 @property (nonatomic, strong) UIView *dimmingView;
