@@ -176,4 +176,6 @@ typedef NS_ENUM(NSInteger, MZFormSheetActionWhenKeyboardAppears) {
  */
 - (void)layoutPresentingViewController;
 
+- (CGRect)formSheetViewControllerFrame;
+
 @end
