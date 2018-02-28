@@ -512,9 +512,10 @@ CGFloat const MZFormSheetPresentationControllerDefaultAboveKeyboardMargin = 0;
     } else if (contentViewSize.height == CGFLOAT_MAX) {
         [contentView setNeedsLayout];
         [contentView layoutIfNeeded];
-        formSheetRect.size = [contentView systemLayoutSizeFittingSize:contentViewSize
-                                        withHorizontalFittingPriority:UILayoutPriorityRequired
-                                              verticalFittingPriority:UILayoutPriorityFittingSizeLevel];
+        CGSize size = [contentView systemLayoutSizeFittingSize: contentViewSize
+                                 withHorizontalFittingPriority: UILayoutPriorityRequired
+                                       verticalFittingPriority: UILayoutPriorityDefaultLow];
+        formSheetRect.size = CGSizeMake(contentViewSize.width, size.height);
     } else {
         formSheetRect.size = contentViewSize;
     }
